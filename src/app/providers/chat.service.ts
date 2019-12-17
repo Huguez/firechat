@@ -42,7 +42,8 @@ export class ChatService {
 
   agregarMensajes( text: string ){
     let mensaje: Mensaje = {
-      nombre: 'Huguez',
+      id: this.usuario.uid,
+      nombre: this.usuario.nombre,
       mensaje: text,
       fecha: new Date().getTime()
     }
@@ -65,5 +66,3 @@ export class ChatService {
     this.afAuth.auth.signOut();
   }
 }
-
-

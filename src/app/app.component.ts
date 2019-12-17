@@ -10,7 +10,11 @@ import { ChatService } from './providers/chat.service';
 export class AppComponent {
   
   title = 'fireChat';
-
-  constructor(  public _cs:ChatService ){}
   
+  constructor(  public _cs: ChatService ){}
+  
+  show(){
+    return this._cs.usuario.uid == null ? true : false ;
+  }
+
 }
